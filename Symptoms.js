@@ -1,0 +1,14 @@
+class Symptoms{
+    constructor(){
+
+
+    }
+    
+    display(){
+
+
+
+
+        
+    }
+}
