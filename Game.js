@@ -5,8 +5,6 @@ class Game{
     }
 
     design(){
-        
-        //Creating ball sprites
         ball1 = createSprite(random(0, width), random(0, height), 60, 60);
         ball2 = createSprite(random(0, width), random(0, height), 60, 60);
         ball3 = createSprite(random(0, width), random(0, height), 60, 60);
@@ -18,7 +16,6 @@ class Game{
         ball9 = createSprite(random(0, width), random(0, height), 60, 60);
         ball10 = createSprite(random(0, width), random(0, height), 60, 60);
         
-        // Give random velocities to ball sprites
         ball1.velocityX = random(-5, 25);
         ball1.velocityY = random(-5, 25);
 
@@ -49,7 +46,6 @@ class Game{
         ball10.velocityX = random(-5, 25);
         ball10.velocityY = random(-5, 25);
 
-        //Giving color to the sprites (balls)
         ball1.shapeColor = rgb(255, 0, 0);
         ball2.shapeColor = rgb(255, 0, 0);
         ball3.shapeColor = rgb(255, 0, 0);
@@ -60,23 +56,18 @@ class Game{
         ball8.shapeColor = rgb(255, 0, 0);
         ball9.shapeColor = rgb(255, 0, 0);
         ball10.shapeColor = rgb(255, 255, 0);
-
     }
 
     display(){
-        //Creating edge sprites
         var edges = createEdgeSprites();
 
-        //Styles of text
         textSize(20);
         fill("black");
         stroke(15);
 
-        //Information of the user about the functionality of the game
         text("There is a yellow square. The ball gets changed to another color.", displayWidth-955, displayHeight-725);
         text("You need to identify the changed ball when all the balls stop.", displayWidth-950, displayHeight-700);
 
-        //Making the ball bounce on edges
         ball1.bounceOff(edges);  
         ball2.bounceOff(edges);
         ball3.bounceOff(edges);
@@ -87,9 +78,7 @@ class Game{
         ball8.bounceOff(edges);
         ball9.bounceOff(edges);
         ball10.bounceOff(edges);
-        //ball11.bounceOff(edges);
-        
-        //Making the ball bounce on each other
+
         ball1.bounce(ball2);
         ball1.bounce(ball3);
         ball1.bounce(ball4);
@@ -144,14 +133,12 @@ class Game{
 
         ball9.bounce(ball10);
 
-        //Changing the color of the ball
         if(frameCount === 200){
             ball10.shapeColor = rgb(255, 0, 0);
+            ball10.velocityX = random(-7, 27);
+            ball10.velocityY = random(-7, 27);
         }
 
-        
-        
-        //Stopping all the balls
         if(frameCount === 700){
         
             ball1.velocityX = 0;
@@ -174,13 +161,21 @@ class Game{
             ball9.velocityY = 0;
             ball10.velocityX = 0;
             ball10.velocityY = 0;
-
-
+            
             var button = createButton("Next");
             button.position(displayWidth - 300, displayHeight - 200); 
+
             button.mousePressed(function(){
-                
+                clickButton = 1;
+
+                winText.hide();
+                button.hide();
+
+                symptoms = new Symptoms();
+                symptoms.display();
+
             });
+
         }
 
         drawSprites();

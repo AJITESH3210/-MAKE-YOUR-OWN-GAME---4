@@ -5,18 +5,17 @@ class Home{
     }
 
     display(){
-
         var title = createElement("h1");
-        title.position(displayWidth/2 - 220, displayHeight/2 + 100);
+        title.position(displayWidth/2 - 245, displayHeight/2 );
         title.html("BOOST YOUR CONCENTRATION");
       
         var appImg = createElement("img");
-        appImg.position(displayWidth/2 - 300, displayHeight/2 - 200);
+        appImg.position(displayWidth/2 - 300, displayHeight/2 - 300);
         appImg.elt.src = "logo.png";
       
         var button = createButton("Next");
-        button.position(displayWidth - 300, displayHeight - 200); 
-      
+        button.position(displayWidth - 300, displayHeight - 300);
+
         button.mousePressed(function(){
           title.hide();
           appImg.hide();
@@ -28,7 +27,5 @@ class Home{
         });
 
     }
-
-
 
 }
