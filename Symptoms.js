@@ -41,7 +41,7 @@ class Symptoms{
         text8.position(displayWidth/2 - 550, displayHeight/2 -60);
         text8.html("• Thinking about different personal problems while doing some work.");
         
-        if(frameCount === 0){
+       
             var button = createButton("Next");
             button.position(displayWidth - 300, displayHeight - 200); 
 
@@ -62,7 +62,7 @@ class Symptoms{
 
             });
 
-      }  
+      
         
     }
 
