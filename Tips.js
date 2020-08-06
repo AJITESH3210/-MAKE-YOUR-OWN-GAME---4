@@ -80,6 +80,33 @@ class Tips{
         var text18 = createElement("h3");
         text18.position(displayWidth/2 - 550, displayHeight/2 +240);
         text18.html("• Some of the best foods to boost your concentration are Fatty Fish, Coffee, Blueberries, Turmeric, Broccoli,  Pumpkin Seeds, Dark Chocolates , Nuts."); 
+    
+        homeButton = createButton("Home");
+        homeButton.position(displayWidth/2  - 560, displayHeight - 300);
+        homeButton.mousePressed(function(){
+            
+            title.hide();
+            text1.hide();
+            text2.hide();
+            text3.hide();
+            text4.hide();
+            text5.hide();
+            text6.hide();
+            text7.hide();
+            text8.hide();
+            text9.hide();
+            text10.hide();
+            text11.hide();
+            text12.hide();
+            text13.hide();
+            text14.hide();
+            text15.hide();
+            text16.hide();
+            text17.hide();
+            text18.hide();
+            home.display();
+
+        })
     }
     
 }

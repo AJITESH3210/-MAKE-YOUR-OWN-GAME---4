@@ -9,18 +9,20 @@ var clicked = false;
 var win_Img, lose_Img;
 var clickButton = 0;
 var winText;
+var homeButton;
 
 function preload(){
   win_Img = loadImage("win.png");
-  lose_Img = loadImage("lose.png");
+  lose_Img = loadImage("download (1).png");
 }
 
 function setup() {
   createCanvas(displayWidth-30, displayHeight-30);
   
   winText = createElement("h1");
-
-  home = new Home();
+  loseText = createElement("h1")
+  
+  home = new Home(); 
   home.display();
 }
 
@@ -39,9 +41,20 @@ function draw() {
     winText.html("Your Concentration is high");    
   }
 
+  if(clicked === false & frameCount >= 700){
+    loseResult = createSprite(displayWidth/2 - 100, displayHeight/2, 30, 30);
+    loseResult.addImage(lose_Img);
+      
+    loseText.position(displayWidth/2 + 250, displayHeight/2 + 100);
+    loseText.html("Your Concentration is low");    
+  }
+
 }
 
 function mouseClicked(){
   game.gameStop();
+  if(game){
+     game.gameStop() 
+  }
 }
 

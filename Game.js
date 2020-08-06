@@ -16,19 +16,19 @@ class Game{
         ball9 = createSprite(random(0, width), random(0, height), 60, 60);
         ball10 = createSprite(random(0, width), random(0, height), 60, 60);
         
-        ball1.velocityX = random(-5, 25);
-        ball1.velocityY = random(-5, 25);
+        ball1.velocityX = random(-7, 25);
+        ball1.velocityY = random(-7, 25);
 
-        ball2.velocityX = random(-5, 25);
-        ball2.velocityY = random(-5, 25);
+        ball2.velocityX = random(-7, 25);
+        ball2.velocityY = random(-7, 25);
 
-        ball3.velocityX = random(-5, 25);
-        ball3.velocityY = random(-5, 25);
+        ball3.velocityX = random(-7, 25);
+        ball3.velocityY = random(-7, 25);
 
-        ball4.velocityX = random(-5, 25);
-        ball4.velocityY = random(-5, 25);
+        ball4.velocityX = random(-7, 25);
+        ball4.velocityY = random(-7, 25);
 
-        ball5.velocityX = random(-5, 25);
+        ball5.velocityX = random(-7, 25);
         ball5.velocityY = random(-5, 25);
 
         ball6.velocityX = random(-5, 25);
